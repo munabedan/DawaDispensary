@@ -84,6 +84,23 @@ if ($products_in_cart) {
 
 <?=template_header('Cart')?>
 
+
+<div class="info-text">
+    
+
+    <?php if(isset($_SESSION['loggedin'])) : ?>
+        <div>
+            <br>
+            <a href="index.php?page=profile"><i class="fas fa-user-circle"></i>Profile</a>
+			<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <br>
+            <br>
+        </div>
+    <?php endif; ?>
+
+
+</div>
+
 <div class="cart content-wrapper">
     <h1>Shopping Cart</h1>
     <form action="index.php?page=cart" method="post">

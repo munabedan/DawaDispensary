@@ -19,6 +19,21 @@ if (isset($_GET['id'])) {
 
 <?=template_header('Product')?>
 
+<div class="info-text">
+    
+
+    <?php if(isset($_SESSION['loggedin'])) : ?>
+        <div>
+            <br>
+            <a href="index.php?page=profile"><i class="fas fa-user-circle"></i>Profile</a>
+			<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <br>
+            <br>
+        </div>
+    <?php endif; ?>
+
+
+</div>
 <div class="product content-wrapper">
     <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>">
     <div>

@@ -18,6 +18,23 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
 
 <?=template_header('Products')?>
 
+
+<div class="info-text">
+    
+
+    <?php if(isset($_SESSION['loggedin'])) : ?>
+        <div>
+            <br>
+            <a href="index.php?page=profile"><i class="fas fa-user-circle"></i>Profile</a>
+			<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <br>
+            <br>
+        </div>
+    <?php endif; ?>
+
+
+</div>
+
 <div class="products content-wrapper">
     <h1>Products</h1>
     <p><?=$total_products?> Products</p>
